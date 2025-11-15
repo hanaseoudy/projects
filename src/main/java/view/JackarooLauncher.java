@@ -9,7 +9,6 @@ public final class JackarooLauncher {
     public static void main(String[] args) {
         new NettyPacketManager();
         new AIHandler();
-
         JackarooMenu.main(args);
     }
 }
