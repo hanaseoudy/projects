@@ -1,0 +1,4 @@
+.text-field {
+    -fx-text-fill: #ff80ec;  /* Text color */
+    -fx-font-size: 14px; /* Optional: change font size */
+}

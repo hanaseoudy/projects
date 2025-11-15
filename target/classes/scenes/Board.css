@@ -1,0 +1,21 @@
+.circle {
+    -fx-stroke: #090861;
+    -fx-stroke-width: 1;
+}
+
+.home-zone {
+    -fx-stroke: #090861;
+    -fx-stroke-width: 1;
+}
+
+.empty-home-zone {
+    -fx-fill: transparent;
+    -fx-stroke: #ed469c;
+    -fx-stroke-width: 1;
+}
+
+.emptyCircle {
+    -fx-fill: transparent;
+    -fx-stroke: #69cbf2;
+    -fx-stroke-width: 3;
+}

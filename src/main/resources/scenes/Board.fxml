@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="bigBoard" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.middleware.frontend.JackarooController" onKeyPressed="#onKeyPressed">
+   <children>
+      <Pane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="795.0" stylesheets="/scenes/Board.css">
+         <children>
+            <ImageView fitHeight="776.0" fitWidth="796.0" layoutY="-8.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/Background2.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <HBox id="cards_1" layoutX="15.0" layoutY="333.0" prefHeight="94.0" prefWidth="217.0" rotate="90.0" scaleX="1.4" scaleY="1.2">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+               </children>
+            </HBox>
+            <HBox id="cards_0" layoutX="288.0" layoutY="596.0" prefHeight="94.0" prefWidth="217.0" scaleX="1.4" scaleY="1.2">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" onMouseEntered="#cardHover" onMouseExited="#cardHoverExit" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" onMouseEntered="#cardHover" onMouseExited="#cardHoverExit" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" onMouseEntered="#cardHover" onMouseExited="#cardHoverExit" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" onMouseEntered="#cardHover" onMouseExited="#cardHoverExit" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+               </children>
+            </HBox>
+            <HBox id="cards_3" layoutX="561.0" layoutY="333.0" prefHeight="94.0" prefWidth="217.0" rotate="90.0" scaleX="1.4" scaleY="1.2">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+               </children>
+            </HBox>
+            <HBox id="cards_2" layoutX="288.0" layoutY="81.0" prefHeight="94.0" prefWidth="217.0" scaleX="1.4" scaleY="1.2">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="100.0" onMouseClicked="#selectCard" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="Cards.css" width="54.0" />
+               </children>
+            </HBox>
+            <Pane layoutX="58.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="677.0" scaleX="0.6" scaleY="0.6">
+               <children>
+                  <StackPane fx:id="Firepit" layoutX="268.0" layoutY="236.0" prefHeight="179.0" prefWidth="138.0" style="-fx-border-color: #541c55; -fx-border-width: 7; -fx-border-radius: 5; -fx-background-color: #8a2a8d;">
+                     <effect>
+                        <DropShadow height="116.92" radius="42.167500000000004" spread="0.02" width="53.75">
+                           <color>
+                              <Color red="0.6299999952316284" green="0.056699998676776886" blue="0.4823097586631775" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </StackPane>
+                  <StackPane layoutX="20.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="221.0" rotate="270.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="194.0" style="-fx-rotate: 0;">
+                           <children>
+                              <HBox layoutX="47.0" layoutY="13.0" prefHeight="10.0" prefWidth="75.0" style="-fx-spacing: 3;">
+                                 <children>
+                                    <Circle id="cell21" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell22" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell23" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell24" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell25" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="47.0" layoutY="35.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell20" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell19" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell18" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell17" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell16" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="169.0" layoutY="108.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: 65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell32" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell31" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="107.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: -65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell14" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell15" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="-1.0" layoutY="137.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 4;">
+                                 <children>
+                                    <Circle id="cell13" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell12" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell11" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="184.0" layoutY="137.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 1;">
+                                 <children>
+                                    <Circle id="cell33" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell34" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell35" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="94.0" layoutY="42.0" prefHeight="41.0" prefWidth="10.0" style="-fx-spacing: 7;">
+                                 <children>
+                                    <Circle id="safe_1_0" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_1_1" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_1_2" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_1_3" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="142.0" layoutY="35.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell26" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell27" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell28" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell29" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell30" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <rotationAxis>
+                              <Point3D x="1.0" y="1.0" z="1.0" />
+                           </rotationAxis>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane layoutX="419.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="161.0" prefWidth="208.0" rotate="90.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="212.0" style="-fx-rotate: 0;">
+                           <children>
+                              <HBox layoutX="48.0" layoutY="-27.0" prefHeight="10.0" prefWidth="75.0" style="-fx-spacing: 3;">
+                                 <children>
+                                    <Circle id="cell71" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell72" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell73" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell74" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell75" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="48.0" layoutY="-5.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell70" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell69" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell68" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell67" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell66" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="170.0" layoutY="68.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: 65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell82" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell81" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="11.0" layoutY="67.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: -65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell64" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell65" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutY="97.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 4;">
+                                 <children>
+                                    <Circle id="cell63" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell62" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell61" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="185.0" layoutY="97.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 1;">
+                                 <children>
+                                    <Circle id="cell83" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell84" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell85" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="95.0" layoutY="2.0" prefHeight="41.0" prefWidth="10.0" style="-fx-spacing: 7;">
+                                 <children>
+                                    <Circle id="safe_3_0" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_3_1" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_3_2" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_3_3" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="143.0" layoutY="-5.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell76" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell77" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell78" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell79" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell80" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <rotationAxis>
+                              <Point3D x="1.0" y="1.0" z="1.0" />
+                           </rotationAxis>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane layoutX="234.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="218.0" prefWidth="193.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="197.0" rotate="-50.2" style="-fx-rotate: 0;">
+                           <children>
+                              <HBox layoutX="55.0" layoutY="22.0" prefHeight="10.0" prefWidth="75.0" style="-fx-spacing: 3;">
+                                 <children>
+                                    <Circle id="cell46" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell47" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell48" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell49" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell50" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="55.0" layoutY="44.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell45" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell44" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell43" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell42" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell41" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="177.0" layoutY="117.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: 65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell57" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell56" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="18.0" layoutY="116.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: -65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell39" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell40" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="7.0" layoutY="146.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 4;">
+                                 <children>
+                                    <Circle id="cell38" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell37" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell36" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="192.0" layoutY="146.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 1;">
+                                 <children>
+                                    <Circle id="cell58" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell59" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell60" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="102.0" layoutY="51.0" prefHeight="41.0" prefWidth="10.0" style="-fx-spacing: 7;">
+                                 <children>
+                                    <Circle id="safe_2_0" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_2_1" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_2_2" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_2_3" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="150.0" layoutY="44.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell51" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell52" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell53" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell54" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell55" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane layoutX="249.0" layoutY="431.0" prefHeight="215.0" prefWidth="187.0" rotate="180.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="201.0" style="-fx-rotate: 0;">
+                           <children>
+                              <HBox layoutX="51.0" layoutY="19.0" prefHeight="10.0" prefWidth="75.0" style="-fx-spacing: 3;">
+                                 <children>
+                                    <Circle id="cell96" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell97" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell98" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell99" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell0" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="51.0" layoutY="41.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell95" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell94" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell93" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell92" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell91" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="173.0" layoutY="114.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: 65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell7" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell6" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="14.0" layoutY="113.0" prefHeight="12.0" prefWidth="10.0" style="-fx-rotate: -65; -fx-spacing: 3; -fx-padding: 0 5 0;">
+                                 <children>
+                                    <Circle id="cell89" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell90" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="3.0" layoutY="143.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 4;">
+                                 <children>
+                                    <Circle id="cell88" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell87" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell86" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="188.0" layoutY="143.0" prefHeight="28.0" prefWidth="3.0" style="-fx-spacing: 3; -fx-padding: 5 0 0 1;">
+                                 <children>
+                                    <Circle id="cell8" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell9" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell10" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="98.0" layoutY="48.0" prefHeight="41.0" prefWidth="10.0" style="-fx-spacing: 7;">
+                                 <children>
+                                    <Circle id="safe_0_0" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_0_1" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_0_2" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="safe_0_3" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="146.0" layoutY="41.0" prefHeight="69.0" prefWidth="11.0" style="-fx-spacing: 3; -fx-padding: 3 0 0 0;">
+                                 <children>
+                                    <Circle id="cell1" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell2" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell3" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell4" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                    <Circle id="cell5" fill="#999272" onMouseClicked="#onCellClick" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="emptyCircle">
+                                       <effect>
+                                          <Glow level="0.8" />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <rotationAxis>
+                              <Point3D x="1.0" y="1.0" z="1.0" />
+                           </rotationAxis>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                  </StackPane>
+                  <Pane layoutX="170.0" layoutY="563.0" prefHeight="47.0" prefWidth="41.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0">
+                     <children>
+                        <Circle id="home_0_3" fill="#999272" layoutX="9.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_0_2" fill="#999272" layoutX="19.0" layoutY="35.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_0_1" fill="#999272" layoutX="30.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_0_0" fill="#999272" layoutX="19.0" layoutY="14.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="1.0" green="0.4444444477558136" blue="0.8055555820465088" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="578.0" layoutY="455.0" prefHeight="47.0" prefWidth="41.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0">
+                     <children>
+                        <Circle id="home_3_3" fill="#999272" layoutX="9.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_3_2" fill="#999272" layoutX="19.0" layoutY="35.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_3_1" fill="#999272" layoutX="30.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_3_0" fill="#999272" layoutX="19.0" layoutY="14.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="1.0" green="0.4444444477558136" blue="0.8055555820465088" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="66.0" layoutY="169.0" prefHeight="47.0" prefWidth="41.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0">
+                     <children>
+                        <Circle id="home_1_3" fill="#999272" layoutX="9.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_1_2" fill="#999272" layoutX="19.0" layoutY="35.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_1_1" fill="#999272" layoutX="30.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_1_0" fill="#999272" layoutX="19.0" layoutY="14.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="1.0" green="0.4444444477558136" blue="0.8055555820465088" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="460.0" layoutY="48.0" prefHeight="47.0" prefWidth="41.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0">
+                     <children>
+                        <Circle id="home_2_3" fill="#999272" layoutX="9.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_2_2" fill="#999272" layoutX="19.0" layoutY="35.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_2_1" fill="#999272" layoutX="30.0" layoutY="24.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                        <Circle id="home_2_0" fill="#999272" layoutX="19.0" layoutY="14.0" onMouseClicked="#onCellClick" radius="5.0" stroke="#090861" strokeType="INSIDE" styleClass="empty-home-zone" />
+                     </children>
+                     <padding>
+                        <Insets top="9.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="1.0" green="0.4444444477558136" blue="0.8055555820465088" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow height="79.675" radius="40.036249999999995" spread="0.56" width="82.47">
+                     <color>
+                        <Color red="0.22982601821422577" green="0.2012999951839447" blue="0.6100000143051147" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Text fx:id="player1Name" fill="#ff3081" fontSmoothingType="LCD" layoutX="113.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU 1" textAlignment="CENTER" wrappingWidth="60.960000000000036">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="player2Name" fill="#ff3081" fontSmoothingType="LCD" layoutX="585.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU 2" textAlignment="CENTER" wrappingWidth="60.960000000000036">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="player3Name" fill="#ff3081" fontSmoothingType="LCD" layoutX="623.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU 3" textAlignment="CENTER" wrappingWidth="60.960000000000036">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <Text fx:id="username" fill="#ff3081" fontSmoothingType="LCD" layoutX="104.0" layoutY="684.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME (YOU)" textAlignment="CENTER" wrappingWidth="117.75992675781254">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+            <ImageView id="playerImageView" fitHeight="79.0" fitWidth="79.0" layoutX="124.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="104.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/avatar.png" />
+               </image>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="571.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/avatar.png" />
+               </image>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="610.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/avatar.png" />
+               </image>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </ImageView>
+            <Button layoutX="671.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#onExit" prefHeight="90.0" prefWidth="118.0" style="-fx-background-color: transparent;" text="🡆" textFill="#6955ff">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Button>
+            <Button layoutX="619.0" layoutY="695.0" mnemonicParsing="false" onMouseClicked="#gamePlay" prefHeight="34.0" prefWidth="68.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-border-width: 1; -fx-border-color: #6955ff; -fx-border-radius: 3;" text="PLAY" textFill="#a599ff">
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.82" />
+               </effect>
+            </Button>
+            <Text fx:id="turnText" fill="#6955ff" layoutX="115.0" layoutY="45.0" strokeWidth="0.0" text="TURN" textAlignment="CENTER" wrappingWidth="550.20000610351565">
+               <font>
+                  <Font name="Bauhaus 93" size="35.0" />
+               </font>
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+            </Text>
+         </children>
+      </Pane>
+      <StackPane fx:id="descriptionPane" layoutX="220.0" layoutY="390.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="346.0" visible="false">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="198.0" prefWidth="360.0" style="-fx-background-color: #a599ff; -fx-border-color: #341fd4; -fx-border-width: 4; -fx-opacity: 1; -fx-background-radius: 7; -fx-border-radius: 5;">
+               <effect>
+                  <Glow level="0.8" />
+               </effect>
+               <children>
+                  <Text fx:id="description" fill="#341fd4" layoutX="13.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIPTION" textAlignment="CENTER" wrappingWidth="333.07238006591797">
+                     <font>
+                        <Font name="Bauhaus 93" size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.4" />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Pane fx:id="winPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="648.0" visible="false">
+         <children>
+            <Text fx:id="winPrompt" fill="#ff0041" layoutX="58.0" layoutY="302.0" stroke="#591628" strokeType="OUTSIDE" text="I WON THE GAME" textAlignment="CENTER" wrappingWidth="532.0000549316406">
+               <font>
+                  <Font name="Bauhaus 93" size="64.0" />
+               </font>
+               <effect>
+                  <Glow level="0.6" />
+               </effect>
+            </Text>
+            <Button layoutX="220.0" layoutY="452.0" mnemonicParsing="false" onMouseClicked="#backToMenu" prefHeight="90.0" prefWidth="208.0" style="-fx-background-color: transparent; -fx-border-color: #341fd4; -fx-border-width: 3; -fx-border-radius: 4;" text="BACK TO MENU" textAlignment="CENTER" textFill="#341fd4" wrapText="true">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="0.6" />
+               </effect>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="133.29" radius="63.2225" spread="0.41" width="121.6">
+               <color>
+                  <Color red="1.0" green="0.8148148059844971" blue="0.8148148059844971" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+   </children>
+</StackPane>

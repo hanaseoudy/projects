@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.middleware.frontend.JackarooController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-1.0">
+         <image>
+            <Image url="@/images/Background3.jpeg" />
+         </image>
+      </ImageView>
+      <Text fill="#158391" layoutX="134.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-scale-y: 1;" text="SETTINGS" wrappingWidth="439.06256103515625">
+         <font>
+            <Font name="Cooper Black" size="60.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Text>
+      <Button layoutX="171.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#controlSound" prefHeight="75.0" prefWidth="329.0" style="-fx-background-color: 0;" text="MUTE SOUND" textFill="#d41e9b">
+         <font>
+            <Font name="Impact" size="40.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="217.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#backToMenu" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: 0;" text="EXIT" textFill="#db23ad">
+         <font>
+            <Font name="Impact" size="22.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="27.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#rotate" style="-fx-background-color: 0; -fx-border-color: #bd1816; -fx-border-radius: 6px;" text="click me" textFill="#d90909">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="153.0" layoutY="209.0">
+         <image>
+            <Image url="@/images/mute.png" />
+         </image>
+      </ImageView>
+      <Arc fill="#dd006f" layoutX="28.0" layoutY="107.0" length="300.0" opacity="0.56" radiusX="24.0" radiusY="21.0" startAngle="30.6" stroke="WHITE" strokeType="INSIDE" strokeWidth="1.3" type="ROUND" />
+   </children>
+</Pane>
